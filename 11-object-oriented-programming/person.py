@@ -23,11 +23,3 @@ class Person:
 
 	def addHobby(self, hobby):
 		self.hobbies.append(hobby)
-
-me = Person('Mark', 'Ormesher', 22)
-
-print('me = ' + str(me))
-me.intro()
-me.addHobby('Programming')
-me.addHobby('Cooking')
-me.intro()
