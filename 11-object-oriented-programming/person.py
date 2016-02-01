@@ -1,5 +1,8 @@
 class Person:
 
+	# fields
+	hobbies = []
+
 	# constructor method - creates an instance
 	def __init__(self, firstname, lastname, age):
 		self.firstname = firstname
@@ -13,8 +16,18 @@ class Person:
 	# self-defined method
 	def intro(self):
 		print('Hi, I\'m ' + self.firstname + ' ' + self.lastname + ' and I am ' + str(self.age) + ' years old.')
+		if len(self.hobbies) == 0:
+			print('I have no hobbies')
+		else:
+			print('I have some hobbies: ' + str(self.hobbies))
+
+	def addHobby(self, hobby):
+		self.hobbies.append(hobby)
 
 me = Person('Mark', 'Ormesher', 22)
 
 print('me = ' + str(me))
-print(me.intro())
+me.intro()
+me.addHobby('Programming')
+me.addHobby('Cooking')
+me.intro()
